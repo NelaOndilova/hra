@@ -6,6 +6,7 @@ class Player {
     this.h = h;
     this.c = c;
     this.v = 5;
+    this.a = 10;
     //velocity
   }
 
@@ -19,6 +20,16 @@ class Player {
     if (keys["s"]) this.y += this.v;
     if (keys["a"]) this.x -= this.v;
     if (keys["d"]) this.x += this.v;
+    if (keys[" "]) {
+      this.w -= 2;
+      this.h -= 2;
+    }
+    if (keys["k"]){
+      if (keys["w"]) this.y -= this.a;
+      if (keys["s"]) this.y += this.a;
+      if (keys["a"]) this.x -= this.a;
+      if (keys["d"]) this.x += this.a;
+    }
   }
 }
 
